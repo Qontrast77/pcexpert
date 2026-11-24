@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>ЭС «Подбор конфигурации ПК»</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+{% macro tree(n) %}
+<ul class="tree"><li>
+  <span class="kind">{{ n.kind }}:</span> {{ n.text }}
+  {% if n.rule %}<span class="by">← <code>{{ n.rule.split(':')[0] }}</code>{{ n.rule.split(':', 1)[1] }}</span>
+  {% else %}<span class="by">← исходный факт</span>{% endif %}
+  {% for ch in n.children %}{{ tree(ch) }}{% endfor %}
+</li></ul>
+{% endmacro %}
+{% macro configuration(res, heading) %}
+<article class="configuration"><h2>{{ heading }}</h2>
+  <div class="cards">
+    <div class="card"><small>Профиль</small><b>{{ res.profile or '—' }}</b></div>
+    <div class="card"><small>Бюджет</small><b>{{ res.input.budget|rub }}</b></div>
+    <div class="card {% if res.left is not none and res.left < 0 %}bad{% endif %}">
+      <small>Стоимость сборки</small><b>{{ res.total|rub }}</b></div>
+    <div class="card"><small>Шагов вывода / правил</small><b>{{ res.steps }} / {{ res.rules_fired }}</b></div>
+  </div>
+
+  {% if res.advice %}
+  <div class="panel">
+    <h3>Выводы и предупреждения</h3>
+    <ul class="advice">
+    {% for a in res.advice %}
+      <li class="{{ a.level }}"><span class="tag">{{ {'error':'Ошибка','warning':'Внимание','info':'Совет'}[a.level] }}</span>
+        {{ a.text }} <code>{{ a.rule }}</code></li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if res.parts %}
+  <div class="panel">
+    {% if not res.pricing_verified %}<p class="note"><strong>Внимание:</strong> суммы рассчитаны по приблизительным ценам, ориентированным на уровень DNS в Иркутске, а не по подтверждённым ценникам магазина. Наличие учитывается отдельно.</p>{% endif %}
+    <h3>Рекомендуемая конфигурация{% if res.resolution %} · игры в {{ res.resolution }}{% endif %}</h3>
+    <div class="table-scroll"><table class="parts">
+      <thead><tr><th>Компонент</th><th>Модель</th><th class="num">Цена</th><th>Цепочка правил</th></tr></thead>
+      <tbody>
+      {% for p in res.parts %}
+        <tr><td>{{ p.title }}</td><td><b>{{ p.name }}</b>{% if p.note %}<div class="note">{{ p.note }}</div>{% endif %}{% if p.dns_analogue %}<div class="note">{{ p.dns_analogue }}</div>{% endif %}</td>
+          <td class="num">{{ p.price|rub }}{% if p.product_url %}<div><a href="{{ p.product_url }}" target="_blank" rel="noopener">DNS · товар</a></div>{% elif p.price > 0 %}<div class="note">ориентировочная цена</div>{% endif %}</td>
+          <td class="chain">{% for c in p.chain %}<code>{{ c }}</code>{% if not loop.last %} → {% endif %}{% endfor %}</td></tr>
+        <tr class="why"><td colspan="4"><details><summary>Почему выбран этот компонент?</summary>
+          {{ tree(p.tree) }}</details></td></tr>
+      {% endfor %}
+      <tr class="total"><td colspan="2">Итого</td><td class="num">{{ res.total|rub }}</td>
+        <td>{% if res.left is not none %}остаток: {{ res.left|rub }}{% endif %}</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+  {% endif %}
+
+  <details class="panel inference-log">
+    <summary>Журнал логического вывода <span class="log-count">{{ res.steps }} шагов · {{ res.rules_fired }} правил</span></summary>
+    <div class="table-scroll"><table class="trace">
+      <thead><tr><th>№</th><th>Правило</th><th>Результат</th></tr></thead>
+      <tbody>
+      {% for t in res.trace %}
+      <tr class="{% if t.revised %}revised{% endif %}"><td>{{ t.step }}</td>
+        <td><code>{{ t.code }}</code> {{ t.title }}</td>
+        <td>{{ t.message }}{% if t.revised %} <span class="pill">пересмотрено</span>{% endif %}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table></div>
+  </details>
+</article>
+{% endmacro %}
+<header class="top">
+  <div class="brand"><span class="logo">ПК</span>
+    <div><b>Экспертная система подбора конфигурации ПК</b>
+      <small>прототип · прямой вывод · {{ nrules }} правил</small></div></div>
+  <nav><a href="/">Подбор</a><a href="/rules">База знаний</a></nav>
+</header>
+
+<main class="layout {% if res %}layout-with-results{% endif %}">
+<form class="panel form" method="post" action="/">
+  <h2>Параметры пользователя</h2>
+
+  <label class="field"><span>Бюджет, ₽</span>
+    <input type="number" name="budget" min="0" step="1000" required
+           value="{{ form.budget or 100000 }}"></label>
+
+  <fieldset><legend>Задачи</legend>
+    {% for key, title in tasks.items() %}
+    <label class="check"><input type="checkbox" name="tasks" value="{{ key }}"
+      {% if key in (form.tasks or []) %}checked{% endif %}> {{ title[0]|upper }}{{ title[1:] }}</label>
+    {% endfor %}
+  </fieldset>
+
+  <div class="row">
+    <label class="field"><span>Разрешение (для игр)</span>
+      <select name="resolution">
+        {% for v in ['1080p', '1440p', '4K'] %}
+        <option {% if form.resolution == v %}selected{% endif %}>{{ v }}</option>{% endfor %}
+      </select></label>
+    <label class="field"><span>Процессор</span>
+      <select name="cpu_brand">
+        {% for v, t in [('any', 'Любой'), ('AMD', 'AMD'), ('Intel', 'Intel')] %}
+        <option value="{{ v }}" {% if form.cpu_brand == v %}selected{% endif %}>{{ t }}</option>{% endfor %}
+      </select></label>
+  </div>
+
+  <fieldset><legend>Размер корпуса</legend>
+    {% for v, t in [('any', 'Без разницы'), ('mATX', 'Компактный (mATX)'), ('ITX', 'Минимальный (Mini-ITX)')] %}
+    <label class="check"><input type="radio" name="form" value="{{ v }}"
+      {% if (form.form or 'any') == v %}checked{% endif %}> {{ t }}</label>{% endfor %}
+  </fieldset>
+
+  <fieldset><legend>Дополнительно</legend>
+    {% for k, t in [('quiet', 'Тихая работа'), ('upgrade', 'Возможность апгрейда'),
+                     ('wifi', 'Встроенный Wi-Fi'), ('virtualization', 'Виртуализация / Docker'),
+                     ('big_storage', 'Много файлов (доп. HDD)')] %}
+    <label class="check"><input type="checkbox" name="{{ k }}" value="1"
+      {% if form[k] %}checked{% endif %}> {{ t }}</label>{% endfor %}
+  </fieldset>
+
+  <fieldset><legend>Вариант 2 — учёт наличия</legend>
+    <label class="check"><input type="radio" name="stock_mode" value="candidate"
+      {% if (form.stock_mode or 'candidate') == 'candidate' %}checked{% endif %}>
+      Ориентировочная сборка по товарам DNS (остатки не проверены)</label>
+    <label class="check"><input type="radio" name="stock_mode" value="confirmed"
+      {% if form.stock_mode == 'confirmed' %}checked{% endif %}>
+      Только подтверждённое наличие в Иркутске</label>
+  </fieldset>
+  <button type="submit">Подобрать конфигурацию</button>
+</form>
+
+<section class="results">
+{% if not res %}
+  <div class="panel empty">
+    <h2>Как это работает</h2>
+    <ol>
+      <li>Введённые параметры становятся <b>фактами</b> рабочей памяти.</li>
+      <li>Правила базы знаний выводят профиль, требования к компонентам и распределяют бюджет.</li>
+      <li>Подбираются совместимые комплектующие; при перерасходе или остатке бюджета
+          решения пересматриваются.</li>
+      <li>Для каждого компонента показывается <b>цепочка сработавших правил</b>.</li>
+    </ol>
+  </div>
+{% else %}
+  <div class="configuration-grid">
+  {{ configuration(res.ideal, 'Вариант 1 — идеальная конфигурация (без учёта наличия)') }}
+  {% if res.local %}
+    {{ configuration(res.local, 'Вариант 2 — ' ~ ('ориентировочно доступные товары DNS (наличие не проверено)' if res.stock_mode == 'candidate' else 'подтверждённое наличие в Иркутске')) }}
+  {% else %}
+    <div class="panel local-unavailable"><h2>Вариант 2 — наличие в Иркутске</h2>
+    <p class="note">Нет подтверждённой полной сборки. {{ res.local_reason }}</p>
+    <p class="note">{% if res.stock_mode == 'candidate' %}Найдено подходящих позиций в DNS: {{ res.stock_metadata.candidates or 0 }}; сведения об остатках не подтверждены.{% else %}Подтверждено позиций: {{ res.stock_metadata.confirmed }}. Неизвестное наличие нельзя считать доступным.{% endif %}</p>
+    </div>
+  {% endif %}
+  </div>
+{% endif %}
+</section>
+</main>
+
+
+</body>
+</html>

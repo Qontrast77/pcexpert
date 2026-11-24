@@ -1,0 +1,81 @@
+﻿category,id,catalog_name,dns_product_name,dns_product_url,price_rub,checked_at,city
+cpu,i3-12100f,Intel Core i3-12100F,,,,,Иркутск
+cpu,r5-5600,AMD Ryzen 5 5600,,,,,Иркутск
+cpu,i5-12400f,Intel Core i5-12400F,,,,,Иркутск
+cpu,r5-5600g,AMD Ryzen 5 5600G,,,,,Иркутск
+cpu,i5-12400,Intel Core i5-12400,,,,,Иркутск
+cpu,r5-7500f,AMD Ryzen 5 7500F,,,,,Иркутск
+cpu,i5-14400f,Intel Core i5-14400F,,,,,Иркутск
+cpu,r5-8600g,AMD Ryzen 5 8600G,,,,,Иркутск
+cpu,r5-9600x,AMD Ryzen 5 9600X,,,,,Иркутск
+cpu,i5-14600kf,Intel Core i5-14600KF,,,,,Иркутск
+cpu,r7-7700,AMD Ryzen 7 7700,,,,,Иркутск
+cpu,cu5-245k,Intel Core Ultra 5 245K,,,,,Иркутск
+cpu,r7-9700x,AMD Ryzen 7 9700X,,,,,Иркутск
+cpu,i7-14700kf,Intel Core i7-14700KF,,,,,Иркутск
+cpu,cu7-265k,Intel Core Ultra 7 265K,,,,,Иркутск
+cpu,r9-9900x,AMD Ryzen 9 9900X,,,,,Иркутск
+cpu,r7-9800x3d,AMD Ryzen 7 9800X3D,,,,,Иркутск
+cpu,r9-9950x,AMD Ryzen 9 9950X,,,,,Иркутск
+gpu,rtx3050,NVIDIA GeForce RTX 3050 6 ГБ,,,,,Иркутск
+gpu,rtx5060,NVIDIA GeForce RTX 5060 8 ГБ,,,,,Иркутск
+gpu,rx9060xt,AMD Radeon RX 9060 XT 16 ГБ,,,,,Иркутск
+gpu,rtx5060ti,NVIDIA GeForce RTX 5060 Ti 16 ГБ,,,,,Иркутск
+gpu,rx9070,AMD Radeon RX 9070 16 ГБ,,,,,Иркутск
+gpu,rtx5070,NVIDIA GeForce RTX 5070 12 ГБ,,,,,Иркутск
+gpu,rx9070xt,AMD Radeon RX 9070 XT 16 ГБ,,,,,Иркутск
+gpu,rtx5070ti,NVIDIA GeForce RTX 5070 Ti 16 ГБ,,,,,Иркутск
+gpu,rtx5080,NVIDIA GeForce RTX 5080 16 ГБ,,,,,Иркутск
+gpu,rtx5090,NVIDIA GeForce RTX 5090 32 ГБ,,,,,Иркутск
+motherboard,h610m-d4,"Intel H610M (DDR4, mATX)",,,,,Иркутск
+motherboard,b550m,"AMD B550M (DDR4, mATX)",,,,,Иркутск
+motherboard,a620m,"AMD A620M (DDR5, mATX)",,,,,Иркутск
+motherboard,b760m-d4,"Intel B760M (DDR4, mATX)",,,,,Иркутск
+motherboard,b550-wifi,"AMD B550 Wi-Fi (DDR4, ATX)",,,,,Иркутск
+motherboard,b650m,"AMD B650M (DDR5, mATX)",,,,,Иркутск
+motherboard,b760m-d5-wifi,"Intel B760M Wi-Fi (DDR5, mATX)",,,,,Иркутск
+motherboard,b860m-wifi,"Intel B860M Wi-Fi (DDR5, mATX)",,,,,Иркутск
+motherboard,b650m-wifi,"AMD B650M Wi-Fi (DDR5, mATX)",,,,,Иркутск
+motherboard,b760-d5-wifi,"Intel B760 Wi-Fi (DDR5, ATX)",,,,,Иркутск
+motherboard,b650-wifi,"AMD B650 Wi-Fi (DDR5, ATX)",,,,,Иркутск
+motherboard,b760i,"Intel B760I Wi-Fi (DDR5, Mini-ITX)",,,,,Иркутск
+motherboard,b650i,"AMD B650I Wi-Fi (DDR5, Mini-ITX)",,,,,Иркутск
+motherboard,z790,"Intel Z790 Wi-Fi (DDR5, ATX)",,,,,Иркутск
+motherboard,x870,"AMD X870 Wi-Fi (DDR5, ATX)",,,,,Иркутск
+motherboard,z890,"Intel Z890 Wi-Fi (DDR5, ATX)",,,,,Иркутск
+ram,ddr4-16,DDR4 16 ГБ (2×8) 3200 МГц,,,,,Иркутск
+ram,ddr4-32,DDR4 32 ГБ (2×16) 3200 МГц,,,,,Иркутск
+ram,ddr4-64,DDR4 64 ГБ (2×32) 3200 МГц,,,,,Иркутск
+ram,ddr5-16,DDR5 16 ГБ (2×8) 6000 МГц,,,,,Иркутск
+ram,ddr5-32,DDR5 32 ГБ (2×16) 6000 МГц,,,,,Иркутск
+ram,ddr5-64,DDR5 64 ГБ (2×32) 6000 МГц,,,,,Иркутск
+ram,ddr5-96,DDR5 96 ГБ (2×48) 6000 МГц,,,,,Иркутск
+ssd,ssd-500,SSD NVMe 500 ГБ (PCIe 4.0),,,,,Иркутск
+ssd,ssd-1t,SSD NVMe 1 ТБ (PCIe 4.0),,,,,Иркутск
+ssd,ssd-2t,SSD NVMe 2 ТБ (PCIe 4.0),,,,,Иркутск
+ssd,ssd-4t,SSD NVMe 4 ТБ (PCIe 4.0),,,,,Иркутск
+hdd,hdd-2t,HDD 2 ТБ 7200 об/мин,,,,,Иркутск
+hdd,hdd-4t,HDD 4 ТБ 5400 об/мин,,,,,Иркутск
+psu,psu-500b,БП 500 Вт 80+ Bronze (ATX),,,,,Иркутск
+psu,psu-600b,БП 600 Вт 80+ Bronze (ATX),,,,,Иркутск
+psu,psu-650g,БП 650 Вт 80+ Gold (ATX),,,,,Иркутск
+psu,psu-750g,БП 750 Вт 80+ Gold (ATX),,,,,Иркутск
+psu,psu-850g,БП 850 Вт 80+ Gold (ATX),,,,,Иркутск
+psu,psu-1000g,БП 1000 Вт 80+ Gold (ATX),,,,,Иркутск
+psu,psu-1200p,БП 1200 Вт 80+ Platinum (ATX),,,,,Иркутск
+psu,sfx-650g,БП 650 Вт 80+ Gold (SFX),,,,,Иркутск
+psu,sfx-850g,БП 850 Вт 80+ Gold (SFX),,,,,Иркутск
+case,case-matx,Корпус mATX бюджетный,,,,,Иркутск
+case,case-atx,Корпус ATX Midi-Tower,,,,,Иркутск
+case,case-matx-c,Корпус mATX компактный,,,,,Иркутск
+case,case-matx-s,Корпус mATX тихий,,,,,Иркутск
+case,case-airflow,Корпус ATX Airflow (сетка),,,,,Иркутск
+case,case-itx,Корпус Mini-ITX (SFX),,,,,Иркутск
+case,case-silent,Корпус ATX с шумоизоляцией,,,,,Иркутск
+case,case-full,Корпус Full-Tower бесшумный,,,,,Иркутск
+cooler,cool-lp,Кулер низкопрофильный 47 мм,,,,,Иркутск
+cooler,cool-lp2,Кулер низкопрофильный 67 мм,,,,,Иркутск
+cooler,cool-120,Башенный кулер 120 мм (4 трубки),,,,,Иркутск
+cooler,cool-dual,Башенный кулер 2×120 мм (6 трубок),,,,,Иркутск
+cooler,cool-quiet,Тихий башенный кулер 140 мм,,,,,Иркутск
+cooler,aio-360,СЖО 360 мм,,,,,Иркутск

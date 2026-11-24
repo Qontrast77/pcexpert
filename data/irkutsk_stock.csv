@@ -1,0 +1,81 @@
+﻿category,id,name,status,checked_at,source_url,store,comment
+cpu,i3-12100f,Intel Core i3-12100F,unknown,,,,Требуется проверка для Иркутска
+cpu,r5-5600,AMD Ryzen 5 5600,candidate,,https://www.dns-shop.ru/product/6d7a8c58afebed20/processor-amd-ryzen-5-5600-oem/,Иркутск: наличие не подтверждено,Найдено на DNS: AMD Ryzen 5 5600 OEM; наличие в Иркутске не подтверждено
+cpu,i5-12400f,Intel Core i5-12400F,candidate,,https://www.dns-shop.ru/product/e24ace9301c0ed20/processor-intel-core-i5-12400f-oem/,Иркутск: наличие не подтверждено,Найдено на DNS: Intel Core i5-12400F OEM; наличие в Иркутске не подтверждено
+cpu,r5-5600g,AMD Ryzen 5 5600G,unknown,,,,Требуется проверка для Иркутска
+cpu,i5-12400,Intel Core i5-12400,candidate,,https://www.dns-shop.ru/product/8ba39f8dfcc8ed20/processor-intel-core-i5-12400-oem/,Иркутск: наличие не подтверждено,Товар DNS: Intel Core i5-12400 OEM; наличие в Иркутске не подтверждено
+cpu,r5-7500f,AMD Ryzen 5 7500F,candidate,,https://www.dns-shop.ru/product/d4bde9994d11ed20/processor-amd-ryzen-5-7500f-oem/,Иркутск: наличие не подтверждено,Найдено на DNS: AMD Ryzen 5 7500F OEM; наличие в Иркутске не подтверждено
+cpu,i5-14400f,Intel Core i5-14400F,unknown,,,,Требуется проверка для Иркутска
+cpu,r5-8600g,AMD Ryzen 5 8600G,candidate,,https://www.dns-shop.ru/product/custompc/7bbd39f9aec7ed20/processor-amd-ryzen-5-8600g-oem/,Иркутск: наличие не подтверждено,Товар DNS: AMD Ryzen 5 8600G OEM; наличие в Иркутске не подтверждено
+cpu,r5-9600x,AMD Ryzen 5 9600X,unknown,,,,Требуется проверка для Иркутска
+cpu,i5-14600kf,Intel Core i5-14600KF,unknown,,,,Требуется проверка для Иркутска
+cpu,r7-7700,AMD Ryzen 7 7700,unknown,,,,Требуется проверка для Иркутска
+cpu,cu5-245k,Intel Core Ultra 5 245K,unknown,,,,Требуется проверка для Иркутска
+cpu,r7-9700x,AMD Ryzen 7 9700X,unknown,,,,Требуется проверка для Иркутска
+cpu,i7-14700kf,Intel Core i7-14700KF,unknown,,,,Требуется проверка для Иркутска
+cpu,cu7-265k,Intel Core Ultra 7 265K,unknown,,,,Требуется проверка для Иркутска
+cpu,r9-9900x,AMD Ryzen 9 9900X,unknown,,,,Требуется проверка для Иркутска
+cpu,r7-9800x3d,AMD Ryzen 7 9800X3D,unknown,,,,Требуется проверка для Иркутска
+cpu,r9-9950x,AMD Ryzen 9 9950X,unknown,,,,Требуется проверка для Иркутска
+gpu,rtx3050,NVIDIA GeForce RTX 3050 6 ГБ,unknown,,,,Требуется проверка для Иркутска
+gpu,rtx5060,NVIDIA GeForce RTX 5060 8 ГБ,candidate,,https://www.dns-shop.ru/user-pc/configuration/833e796cb65eea00/,Иркутск: наличие не подтверждено,Найдено на DNS: Palit GeForce RTX 5060 Dual 8 ГБ; наличие в Иркутске не подтверждено
+gpu,rx9060xt,AMD Radeon RX 9060 XT 16 ГБ,candidate,,https://www.dns-shop.ru/user-pc/configuration/7e0fc4704e46bfc1/,Иркутск: наличие не подтверждено,Найдено на DNS: PowerColor Radeon RX 9060 XT Reaper 16 ГБ; наличие в Иркутске не подтверждено
+gpu,rtx5060ti,NVIDIA GeForce RTX 5060 Ti 16 ГБ,unknown,,,,Требуется проверка для Иркутска
+gpu,rx9070,AMD Radeon RX 9070 16 ГБ,unknown,,,,Требуется проверка для Иркутска
+gpu,rtx5070,NVIDIA GeForce RTX 5070 12 ГБ,unknown,,,,Требуется проверка для Иркутска
+gpu,rx9070xt,AMD Radeon RX 9070 XT 16 ГБ,unknown,,,,Требуется проверка для Иркутска
+gpu,rtx5070ti,NVIDIA GeForce RTX 5070 Ti 16 ГБ,unknown,,,,Требуется проверка для Иркутска
+gpu,rtx5080,NVIDIA GeForce RTX 5080 16 ГБ,unknown,,,,Требуется проверка для Иркутска
+gpu,rtx5090,NVIDIA GeForce RTX 5090 32 ГБ,unknown,,,,Требуется проверка для Иркутска
+motherboard,h610m-d4,"Intel H610M (DDR4, mATX)",unknown,,,,Требуется проверка для Иркутска
+motherboard,b550m,"AMD B550M (DDR4, mATX)",candidate,,https://www.dns-shop.ru/product/analog/37d78a69265bd9cb/materinskaa-plata-msi-pro-b550m-b/,Иркутск: наличие не подтверждено,Найдено на DNS: MSI PRO B550M-B; наличие в Иркутске не подтверждено
+motherboard,a620m,"AMD A620M (DDR5, mATX)",unknown,,,,Требуется проверка для Иркутска
+motherboard,b760m-d4,"Intel B760M (DDR4, mATX)",candidate,,https://www.dns-shop.ru/product/eeec7d7581d0ed20/materinskaa-plata-msi-pro-b760m-a-wifi-ddr4/,Иркутск: наличие не подтверждено,Найдено на DNS: MSI PRO B760M-A WIFI DDR4; наличие в Иркутске не подтверждено
+motherboard,b550-wifi,"AMD B550 Wi-Fi (DDR4, ATX)",reference,,https://www.dns-shop.ru/product/characteristics/c421af78c07ad9cb/materinskaa-plata-msi-pro-b550m-wifi6e/,Иркутск: наличие не подтверждено,"Найдено на DNS: MSI PRO B550M WIFI6E (плата mATX; требуется другая модель ATX); наличие в Иркутске не подтверждено; параметры отличаются от позиции каталога, не выбирать автоматически"
+motherboard,b650m,"AMD B650M (DDR5, mATX)",candidate,,https://www.dns-shop.ru/product/2a63664ce255ed20/materinskaa-plata-msi-pro-b650m-p/,Иркутск: наличие не подтверждено,Найдено на DNS: MSI PRO B650M-P; наличие в Иркутске не подтверждено
+motherboard,b760m-d5-wifi,"Intel B760M Wi-Fi (DDR5, mATX)",unknown,,,,Требуется проверка для Иркутска
+motherboard,b860m-wifi,"Intel B860M Wi-Fi (DDR5, mATX)",unknown,,,,Требуется проверка для Иркутска
+motherboard,b650m-wifi,"AMD B650M Wi-Fi (DDR5, mATX)",unknown,,,,Требуется проверка для Иркутска
+motherboard,b760-d5-wifi,"Intel B760 Wi-Fi (DDR5, ATX)",unknown,,,,Требуется проверка для Иркутска
+motherboard,b650-wifi,"AMD B650 Wi-Fi (DDR5, ATX)",unknown,,,,Требуется проверка для Иркутска
+motherboard,b760i,"Intel B760I Wi-Fi (DDR5, Mini-ITX)",unknown,,,,Требуется проверка для Иркутска
+motherboard,b650i,"AMD B650I Wi-Fi (DDR5, Mini-ITX)",unknown,,,,Требуется проверка для Иркутска
+motherboard,z790,"Intel Z790 Wi-Fi (DDR5, ATX)",unknown,,,,Требуется проверка для Иркутска
+motherboard,x870,"AMD X870 Wi-Fi (DDR5, ATX)",unknown,,,,Требуется проверка для Иркутска
+motherboard,z890,"Intel Z890 Wi-Fi (DDR5, ATX)",unknown,,,,Требуется проверка для Иркутска
+ram,ddr4-16,DDR4 16 ГБ (2×8) 3200 МГц,candidate,,https://www.dns-shop.ru/product/analog/0b43bfb2c3e6ed20/operativnaa-pamat-ddr4-udimm-kingston-fury-renegade-kf432c16rb2k216-16-gb/,Иркутск: наличие не подтверждено,Товар DNS: Kingston FURY Renegade 2x8 ГБ DDR4-3200; наличие в Иркутске не подтверждено
+ram,ddr4-32,DDR4 32 ГБ (2×16) 3200 МГц,candidate,,https://www.dns-shop.ru/product/892f4070440bad91/operativnaa-pamat-ddr4-udimm-kingston-fury-beast-black-kf432c16bbk232-sp-32-gb/,Иркутск: наличие не подтверждено,Найдено на DNS: Kingston FURY Beast Black 32 ГБ (2x16) DDR4-3200; наличие в Иркутске не подтверждено
+ram,ddr4-64,DDR4 64 ГБ (2×32) 3200 МГц,unknown,,,,Требуется проверка для Иркутска
+ram,ddr5-16,DDR5 16 ГБ (2×8) 6000 МГц,unknown,,,,Требуется проверка для Иркутска
+ram,ddr5-32,DDR5 32 ГБ (2×16) 6000 МГц,candidate,,https://www.dns-shop.ru/product/analog/22e2195da712d582/operativnaa-pamat-ddr5-udimm-kingston-fury-beast-black-kf560c30bbek2-32-32-gb/,Иркутск: наличие не подтверждено,Найден комплект Kingston FURY Beast Black 2x16 ГБ DDR5-6000; остаток для Иркутска не подтверждён
+ram,ddr5-64,DDR5 64 ГБ (2×32) 6000 МГц,unknown,,,,Требуется проверка для Иркутска
+ram,ddr5-96,DDR5 96 ГБ (2×48) 6000 МГц,unknown,,,,Требуется проверка для Иркутска
+ssd,ssd-500,SSD NVMe 500 ГБ (PCIe 4.0),unknown,,,,Требуется проверка для Иркутска
+ssd,ssd-1t,SSD NVMe 1 ТБ (PCIe 4.0),candidate,,https://www.dns-shop.ru/product/fe0d78e690d9d582/1000-gb-m2-nvme-nakopitel-kingston-nv3-snv3s1000g/,Иркутск: наличие не подтверждено,Найдено на DNS: Kingston NV3 1 ТБ PCIe 4.0; наличие в Иркутске не подтверждено
+ssd,ssd-2t,SSD NVMe 2 ТБ (PCIe 4.0),unknown,,,,Требуется проверка для Иркутска
+ssd,ssd-4t,SSD NVMe 4 ТБ (PCIe 4.0),unknown,,,,Требуется проверка для Иркутска
+hdd,hdd-2t,HDD 2 ТБ 7200 об/мин,unknown,,,,Требуется проверка для Иркутска
+hdd,hdd-4t,HDD 4 ТБ 5400 об/мин,unknown,,,,Требуется проверка для Иркутска
+psu,psu-500b,БП 500 Вт 80+ Bronze (ATX),unknown,,,,Требуется проверка для Иркутска
+psu,psu-600b,БП 600 Вт 80+ Bronze (ATX),reference,,https://www.dns-shop.ru/product/custompc/5e7bfbcba9b9ed20/blok-pitania-deepcool-pk650d-r-pk650d-fa0b-eu/,Иркутск: наличие не подтверждено,"Найдено на DNS: DEEPCOOL PK650D 650 Вт Bronze (не 600 Вт); наличие в Иркутске не подтверждено; параметры отличаются от позиции каталога, не выбирать автоматически"
+psu,psu-650g,БП 650 Вт 80+ Gold (ATX),candidate,,https://www.dns-shop.ru/product/7076990ba7abd21a/blok-pitania-deepcool-gamerstorm-pn650m-r-pn650m-fc0b-wgeu-cernyj/,Иркутск: наличие не подтверждено,Найдено на DNS: DEEPCOOL GamerStorm PN650M Gold; наличие в Иркутске не подтверждено
+psu,psu-750g,БП 750 Вт 80+ Gold (ATX),candidate,,https://www.dns-shop.ru/product/accessories/70769b18a7abd21a/blok-pitania-deepcool-gamerstorm-pn750m-r-pn750m-fc0b-wgeu-cernyj/,Иркутск: наличие не подтверждено,Найдено на DNS: DEEPCOOL GamerStorm PN750M Gold; наличие в Иркутске не подтверждено
+psu,psu-850g,БП 850 Вт 80+ Gold (ATX),unknown,,,,Требуется проверка для Иркутска
+psu,psu-1000g,БП 1000 Вт 80+ Gold (ATX),unknown,,,,Требуется проверка для Иркутска
+psu,psu-1200p,БП 1200 Вт 80+ Platinum (ATX),unknown,,,,Требуется проверка для Иркутска
+psu,sfx-650g,БП 650 Вт 80+ Gold (SFX),unknown,,,,Требуется проверка для Иркутска
+psu,sfx-850g,БП 850 Вт 80+ Gold (SFX),unknown,,,,Требуется проверка для Иркутска
+case,case-matx,Корпус mATX бюджетный,unknown,,,,Требуется проверка для Иркутска
+case,case-atx,Корпус ATX Midi-Tower,candidate,,https://www.dns-shop.ru/product/0d7e80408f5fed20/korpus-deepcool-cc560-v2-r-cc560-bkgaa4-g-2-cernyj/,Иркутск: наличие не подтверждено,Найдено на DNS: DEEPCOOL CC560 V2 ATX; наличие в Иркутске не подтверждено
+case,case-matx-c,Корпус mATX компактный,candidate,,https://www.dns-shop.ru/user-pc/configuration/f2c76dc2aa0b92d4/,Иркутск: наличие не подтверждено,"Найдено на DNS: DEEPCOOL CH260 Mini-Tower, представлено в подборке DNS; наличие в Иркутске не подтверждено"
+case,case-matx-s,Корпус mATX тихий,unknown,,,,Требуется проверка для Иркутска
+case,case-airflow,Корпус ATX Airflow (сетка),candidate,,https://www.dns-shop.ru/product/0d7e80408f5fed20/korpus-deepcool-cc560-v2-r-cc560-bkgaa4-g-2-cernyj/,Иркутск: наличие не подтверждено,Найдено на DNS: DEEPCOOL CC560 V2 ATX (сетчатый корпус); наличие в Иркутске не подтверждено
+case,case-itx,Корпус Mini-ITX (SFX),unknown,,,,Требуется проверка для Иркутска
+case,case-silent,Корпус ATX с шумоизоляцией,unknown,,,,Требуется проверка для Иркутска
+case,case-full,Корпус Full-Tower бесшумный,unknown,,,,Требуется проверка для Иркутска
+cooler,cool-lp,Кулер низкопрофильный 47 мм,unknown,,,,Требуется проверка для Иркутска
+cooler,cool-lp2,Кулер низкопрофильный 67 мм,unknown,,,,Требуется проверка для Иркутска
+cooler,cool-120,Башенный кулер 120 мм (4 трубки),candidate,,https://www.dns-shop.ru/product/3f6f629ce633ed20/kuler-dla-processora-deepcool-ag400-r-ag400-bknnmn-g-1-cernyj/,Иркутск: наличие не подтверждено,Найдено на DNS: DEEPCOOL AG400; наличие в Иркутске не подтверждено
+cooler,cool-dual,Башенный кулер 2×120 мм (6 трубок),unknown,,,,Требуется проверка для Иркутска
+cooler,cool-quiet,Тихий башенный кулер 140 мм,unknown,,,,Требуется проверка для Иркутска
+cooler,aio-360,СЖО 360 мм,unknown,,,,Требуется проверка для Иркутска

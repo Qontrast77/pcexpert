@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>База знаний — ЭС «Подбор конфигурации ПК»</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">ПК</span>
+    <div><b>Экспертная система подбора конфигурации ПК</b>
+      <small>база знаний · {{ total }} правил</small></div></div>
+  <nav><a href="/">Подбор</a><a href="/rules">База знаний</a></nav>
+</header>
+<main class="wide">
+{% for group, rules in groups.items() %}
+  <div class="panel">
+    <h3>{{ group }} <small>({{ rules|length }})</small></h3>
+    <table class="trace">
+      <thead><tr><th>Код</th><th>Правило</th><th>Приоритет</th><th>Условия (образцы)</th></tr></thead>
+      <tbody>
+      {% for r in rules %}
+        <tr><td><code>{{ r.code }}</code></td><td>{{ r.title }}</td><td>{{ r.salience }}</td>
+          <td class="note">{% for p in r.patterns %}{% if p.negated %}NOT {% endif %}{{ p.kind }}{% if p.constraints %}({{ p.constraints|join(', ') }}){% endif %}{% if not loop.last %}, {% endif %}{% endfor %}{% if r.test %} + доп. проверка{% endif %}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endfor %}
+</main>
+</body>
+</html>
